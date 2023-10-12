@@ -13,5 +13,5 @@ fi
 
 if [ "$DB_TYPE" == "docdb" ]; then
   curl -O rds-combined-ca-bundle.pem https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
-  mongo --ssl --host $(get_parameter docdb.${ENV}.endpoint):27017 --sslCAFile rds-combined-ca-bundle.pem --username $(get_parameter docdb.${ENV}.master_username) --password $(get_parameter docdb.${ENV}.master_username) <${component}.js
+  mongo --ssl --host $(get_parameter docdb.${ENV}.endpoint):27017 --sslCAFile rds-combined-ca-bundle.pem --username $(get_parameter docdb.${ENV}.master_username) --password $(get_parameter docdb.${ENV}.master_username) <${COMPONENT}.js
 fi
