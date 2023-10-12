@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone https://github.com/raghudevopsb75/$COMPONENT
+git clone https://github.com/raghudevopsb74/$COMPONENT
 cd $COMPONENT/schema
 
 get_parameter() {
